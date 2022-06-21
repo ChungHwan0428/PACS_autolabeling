@@ -50,7 +50,7 @@ winpty docker exec -it cvat bash -ic 'python3 ~/manage.py createsuperuser'
 - 웹 개발  
 
 👨 [이충환](https://github.com/ChungHwan0428)  
-- 오토라벨링 모델 개발  
+- 웹 개발, 오토라벨링 모델 개발  
 
 👨 [이진수](https://github.com/ljs-ai)  
 - 라벨링 데이터 제작  
