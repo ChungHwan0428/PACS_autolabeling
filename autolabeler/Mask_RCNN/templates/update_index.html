@@ -1,0 +1,50 @@
+{% extends "base.html" %} {% block content %}
+
+<h1>Mask_RCNN</h1>
+
+<div>
+  <form
+    action="/predict"
+    ="upload-file"
+    method="post"
+    enctype="multipart/form-data"
+  >
+    <label for="imageUpload" class="upload-label"> Choose....! </label>
+    <input
+      type="file"
+      name="file"
+      id="imageUpload"
+      accept=".png, .jpg, .jpeg, .mp4"
+    />
+    <label for="submit_" class="upload-label"> predict </label>
+    <input type="submit" id="submit_" style="opacity: 0" />
+  </form>
+
+  <div class="image-section" style="width: 800px">
+    <div class="img-preview">
+      <div id="imagePreview"></div>
+    </div>
+    <div>
+      <button type="button" class="btn btn-primary btn-lg" id="btn-predict">
+        Remove
+      </button>
+    </div>
+  </div>
+
+  <div class="loader" style="display: none"></div>
+
+  <h3 id="result">
+    <span> </span>
+  </h3>
+  <div class="result_img-section" style="display: none">
+    <div class="img-preview">
+      <img src="" id="myimg" style="width: 800px" />
+    </div>
+  </div>
+
+  {% if True %}
+  <img src="{{ url_for('static', filename=image_file) }}" id="imgggg" />
+  {% endif %}
+</div>
+
+{% endblock %}
